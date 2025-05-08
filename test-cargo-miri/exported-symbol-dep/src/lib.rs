@@ -1,4 +1,4 @@
-#[no_mangle]
+#[unsafe(no_mangle)]
 fn exported_symbol() -> i32 {
     123456
 }
@@ -6,7 +6,7 @@ fn exported_symbol() -> i32 {
 struct AssocFn;
 
 impl AssocFn {
-    #[no_mangle]
+    #[unsafe(no_mangle)]
     fn assoc_fn_as_exported_symbol() -> i32 {
         -123456
     }

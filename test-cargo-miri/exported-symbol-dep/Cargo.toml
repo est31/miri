@@ -2,4 +2,4 @@
 name = "exported_symbol_dep"
 version = "0.1.0"
 authors = ["Miri Team"]
-edition = "2018"
+edition = "2024"

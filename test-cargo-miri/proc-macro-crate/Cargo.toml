@@ -3,7 +3,7 @@
 name = "proc_macro_crate"
 version = "0.1.0"
 authors = ["Miri Team"]
-edition = "2018"
+edition = "2024"
 
 [lib]
 proc-macro = true

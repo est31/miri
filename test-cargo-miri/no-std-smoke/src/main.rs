@@ -5,7 +5,7 @@
 
 // Plumbing to let us use `writeln!` to host stdout:
 
-extern "Rust" {
+unsafe extern "Rust" {
     fn miri_write_to_stdout(bytes: &[u8]);
 }
 
@@ -22,7 +22,7 @@ impl Write for Host {
     }
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 fn miri_start(_: isize, _: *const *const u8) -> isize {
     writeln!(Host, "hello, world!").unwrap();
     0
